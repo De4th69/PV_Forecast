@@ -37,6 +37,11 @@
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidTlsProvider>btls</AndroidTlsProvider>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -54,8 +59,46 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Plugin.Connectivity, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.1.1\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.1.1\lib\MonoAndroid10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Notifications, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Notifications.4.0.1\lib\MonoAndroid10\Plugin.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Notifications.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Notifications.4.0.1\lib\MonoAndroid10\Plugin.Notifications.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.3.1.1\lib\MonoAndroid10\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.3.1.1\lib\MonoAndroid10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\sqlite-net-pcl.1.3.3\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a84b7dcfb1391f7f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\MonoAndroid\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\MonoAndroid\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLitePCLRaw.core.1.1.5\lib\MonoAndroid\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.lib.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e4ad490600e2234c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLitePCLRaw.lib.e_sqlite3.android.1.1.5\lib\MonoAndroid\SQLitePCLRaw.lib.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SQLitePCLRaw.provider.e_sqlite3.android.1.1.5\lib\MonoAndroid\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.ObjectModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
@@ -119,8 +162,12 @@
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.5.0.122203\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="XamarinShortcutBadger, Version=1.1.808.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.ShortcutBadger.1.1.809\lib\MonoAndroid10\XamarinShortcutBadger.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,7 +192,7 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PV_Forecast20\PV_Forecast.csproj">
+    <ProjectReference Include="..\PV_Forecast\PV_Forecast.csproj">
       <Project>{43dd2fa4-73d6-4246-bb70-8acee86b5cc4}</Project>
       <Name>PV_Forecast</Name>
     </ProjectReference>
