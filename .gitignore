@@ -159,6 +159,7 @@ ClientBin/
 *.publishsettings
 node_modules/
 *.vs
+ApiKey.txt
 
 # RIA/Silverlight projects
 Generated_Code/
