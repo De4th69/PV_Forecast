@@ -120,7 +120,25 @@
   <data name="AppName" xml:space="preserve">
     <value>PV Vorschau</value>
   </data>
-  <data name="Test" xml:space="preserve">
-    <value>Test Hallo Welt</value>
+  <data name="BtnNextText" xml:space="preserve">
+    <value>Nächste</value>
+  </data>
+  <data name="BtnPreviousText" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="CityLabelText" xml:space="preserve">
+    <value>Deine Stadt auswählen</value>
+  </data>
+  <data name="CountryLabelText" xml:space="preserve">
+    <value>Land wählen</value>
+  </data>
+  <data name="LblCityLoadingText" xml:space="preserve">
+    <value>Lade Städte</value>
+  </data>
+  <data name="LblLoadingText" xml:space="preserve">
+    <value>Lade Daten</value>
+  </data>
+  <data name="SearchBarPlaceholderText" xml:space="preserve">
+    <value>Suche Stadt (Name, PLZ)</value>
   </data>
 </root>

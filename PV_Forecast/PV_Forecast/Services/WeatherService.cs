@@ -1,9 +1,5 @@
-﻿using Newtonsoft.Json;
-using PV_Forecast.Views.Home;
-using System;
-using System.Collections.Generic;
+﻿using PV_Forecast.Views.Home;
 using System.IO;
-using System.Text;
 
 namespace PV_Forecast.Services
 {

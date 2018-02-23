@@ -6,10 +6,14 @@
 
   <ItemGroup>
     <None Remove="Resources\ApiKey.txt" />
+    <None Remove="Resources\Citylist.json" />
+    <None Remove="Resources\CountryList.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\ApiKey.txt" />
+    <EmbeddedResource Include="Resources\Citylist.json" />
+    <EmbeddedResource Include="Resources\CountryList.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,11 +41,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controls\" />
-    <Folder Include="Classes\" />
   </ItemGroup>
 
 </Project>

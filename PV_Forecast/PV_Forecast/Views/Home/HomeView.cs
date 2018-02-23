@@ -15,7 +15,7 @@ namespace PV_Forecast.Views.Home
             Title = AppResource.AppName;
 
             var stack = new StackLayout();
-            stack.Children.Add(new Label { Text = AppResource.Test });
+            
             Content = stack;
 
             WeatherService.Instance.GetWeatherForToday();

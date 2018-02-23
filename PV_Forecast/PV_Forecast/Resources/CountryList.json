@@ -1,0 +1,17 @@
+﻿[
+  {
+    "id": 1,
+    "FullName": "Deutschland",
+    "ShortName": "DE"
+  },
+  {
+    "id": 2,
+    "FullName": "Österreich",
+    "ShortName": "AT"
+  },
+  {
+    "id": 3,
+    "FullName": "Schweiz",
+    "ShortName": "CH"
+  }
+]

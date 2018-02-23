@@ -70,11 +70,65 @@ namespace PV_Forecast.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Test Hello World ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Next ähnelt.
         /// </summary>
-        public static string Test {
+        public static string BtnNextText {
             get {
-                return ResourceManager.GetString("Test", resourceCulture);
+                return ResourceManager.GetString("BtnNextText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Back ähnelt.
+        /// </summary>
+        public static string BtnPreviousText {
+            get {
+                return ResourceManager.GetString("BtnPreviousText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pick your city ähnelt.
+        /// </summary>
+        public static string CityLabelText {
+            get {
+                return ResourceManager.GetString("CityLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pick your country ähnelt.
+        /// </summary>
+        public static string CountryLabelText {
+            get {
+                return ResourceManager.GetString("CountryLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Loading cities ähnelt.
+        /// </summary>
+        public static string LblCityLoadingText {
+            get {
+                return ResourceManager.GetString("LblCityLoadingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fetching data ähnelt.
+        /// </summary>
+        public static string LblLoadingText {
+            get {
+                return ResourceManager.GetString("LblLoadingText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Search city (Name, Postcode) ähnelt.
+        /// </summary>
+        public static string SearchBarPlaceholderText {
+            get {
+                return ResourceManager.GetString("SearchBarPlaceholderText", resourceCulture);
             }
         }
     }

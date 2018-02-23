@@ -120,7 +120,25 @@
   <data name="AppName" xml:space="preserve">
     <value>PV Forecast</value>
   </data>
-  <data name="Test" xml:space="preserve">
-    <value>Test Hello World</value>
+  <data name="BtnNextText" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="BtnPreviousText" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="CityLabelText" xml:space="preserve">
+    <value>Pick your city</value>
+  </data>
+  <data name="CountryLabelText" xml:space="preserve">
+    <value>Pick your country</value>
+  </data>
+  <data name="LblCityLoadingText" xml:space="preserve">
+    <value>Loading cities</value>
+  </data>
+  <data name="LblLoadingText" xml:space="preserve">
+    <value>Fetching data</value>
+  </data>
+  <data name="SearchBarPlaceholderText" xml:space="preserve">
+    <value>Search city (Name, Postcode)</value>
   </data>
 </root>
